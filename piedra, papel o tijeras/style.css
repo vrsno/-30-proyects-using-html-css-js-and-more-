@@ -1,0 +1,58 @@
+body{
+    font-family: cursive;
+    text-align: center;
+    background-color: #ededed;
+}
+
+.buttons{
+    margin: 20px 0;
+}
+
+.choice{
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 4px;
+    height: 80px;
+    width: 90px;
+    transition: opacity .3s;
+}
+
+.choice:hover{
+    opacity: .74;
+}
+
+.rock{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz15C1RO1AAU5y1roncc8m9DlwspTL98eMGg&s");
+    background-size: cover;
+   
+}
+
+.paper{
+    background-image: url("https://cdn5.dibujos.net/dibujos/pintados/202106/hoja-de-papel-colegio-12165189.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.scissors{
+    background-image: url("https://i.pinimg.com/736x/25/69/1a/25691ab1e1743e40b44679b58e3a02f3.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#result{
+    font-size: 1.5em;
+    margin: 20px;
+}
+
+#reset{
+    margin-top: 20px;
+    border: none;
+    padding: 20px 10px;
+    box-shadow: 0 4px 8px #0003;
+    transition: outline .3s ease;
+}
+
+#reset:hover{
+    outline: 2px solid #063;
+}
