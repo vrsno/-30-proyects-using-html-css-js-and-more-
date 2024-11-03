@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz cumple</title>
+    
+</head>
+<body>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap');
+
+body {
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+
+h1{
+    position: relative;
+    margin-top: 10px;
+    font-family: monospace;
+    font-weight: 800;
+    text-align: center;
+    font-size: 3rem;
+    
+    color: #c5c5c5;
+}
+
+p{
+    text-align: center;
+    padding: 10px;
+   border-radius: 6px;
+   border: none;
+   box-shadow: 0 4px 8px #0005;
+    font-size: 20px;
+    background-color: transparent;
+    color: #c5c5c5;
+}
+
+.audio{
+    position: absolute;
+    top: 195%;
+}
+
+.footer{
+    
+    width: 100%;
+    position: absolute;
+    top: 250%;
+
+}
+
+footer p{ 
+    box-shadow: none;
+}
+.cake {
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    margin-top: 166px;
+    margin-left: -125px;
+}
+
+.plate {
+    width: 270px;
+    height: 110px;
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    box-shadow: 0 2px 0 darken(#ccc, 10%), 0 4px 0 darken(#ccc, 10%),
+                0 5px 40px rgba(0, 0, 0, 0.5);
+}
+
+.cake > * {
+    position: absolute;
+}
+
+.layer {
+    position: absolute;
+    display: block;
+    width: 250px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #553c13; /* chocolate color */
+    box-shadow: 0 2px 0px rgba(255, 255, 255, 0.05), 
+                0 4px 0px rgba(0, 0, 0, 0.082),
+                0 6px 0px rgba(0, 0, 0, 0.084), 
+                0 8px 0px rgba(0, 0, 0, 0.086),
+                0 10px 0px rgba(0, 0, 0, 0.088), 
+                0 12px 0px rgba(0, 0, 0, 0.09),
+                0 14px 0px rgba(0, 0, 0, 0.092), 
+                0 16px 0px rgba(0, 0, 0, 0.094),
+                0 18px 0px rgba(0, 0, 0, 0.096), 
+                0 20px 0px rgba(0, 0, 0, 0.098),
+                0 22px 0px rgba(0, 0, 0, 0.1), 
+                0 24px 0px rgba(0, 0, 0, 0.102),
+                0 26px 0px rgba(0, 0, 0, 0.104), 
+                0 28px 0px rgba(0, 0, 0, 0.106),
+                0 30px 0px rgba(0, 0, 0, 0.108);
+}
+
+.layer-top {
+    top: 0px;
+}
+
+.layer-middle {
+    top: 33px;
+}
+
+.layer-bottom {
+    top: 66px;
+}
+
+.icing {
+    top: 2px;
+    left: 5px;
+    background-color: #f0e4d0; /* vanilla color */
+    width: 240px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.icing:before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    bottom: 6px;
+    left: 5px;
+    background-color: #f7e5d5; /* lighten vanilla */
+    box-shadow: 0 0 4px rgba(240, 228, 208, 0.5), 
+                0 0 4px rgba(240, 228, 208, 0.5),
+                0 0 4px rgba(240, 228, 208, 0.5);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.drip {
+    display: block;
+    width: 50px;
+    height: 60px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: #f0e4d0; /* vanilla */
+}
+
+.drip1 {
+    top: 53px;
+    left: 5px;
+    transform: skewY(15deg);
+    height: 48px;
+    width: 40px;
+}
+
+.drip2 {
+    top: 69px;
+    left: 181px;
+    transform: skewY(-15deg);
+}
+
+.drip3 {
+    top: 54px;
+    left: 90px;
+    width: 80px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.candle {
+    background-color: #7b020b;
+    width: 16px;
+    height: 50px;
+    border-radius: 8px / 4px;
+    top: -20px;
+    left: 50%;
+    margin-left: -8px;
+    z-index: 10;
+}
+.candle {
+    margin-bottom: 4px; /* Espacio adicional debajo de la vela */
+}
+
+.candle:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #9a0a14; /* lighten candle color */
+}
+
+.flame {
+    position: absolute;
+    background-color: orange;
+    width: 15px;
+    height: 35px;
+    border-radius: 10px 10px 10px 10px / 25px 25px 10px 10px;
+    top: -34px;
+    left: 50%;
+    margin-left: -7.5px;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 
+                0 0 20px rgba(255, 165, 0, 0.5),
+                0 0 60px rgba(255, 165, 0, 0.5), 
+                0 0 80px rgba(255, 165, 0, 0.5);
+    transform-origin: 50% 90%;
+    animation: flicker 1s ease-in-out alternate infinite;
+}
+
+@media screen and (min-width:440px){
+        .audio{
+            top: 300%;
+        }
+
+        .footer{
+    
+    width: 100%;
+    
+    top: 400%;
+
+}
+}
+
+
+@keyframes flicker {
+    0% {
+        transform: skewX(5deg);
+        box-shadow: 0 0 10px rgba(255, 165, 0, 0.2), 
+                    0 0 20px rgba(255, 165, 0, 0.2),
+                    0 0 60px rgba(255, 165, 0, 0.2), 
+                    0 0 80px rgba(255, 165, 0, 0.2);
+    }
+    25% {
+        transform: skewX(-5deg);
+        box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 
+                    0 0 20px rgba(255, 165, 0, 0.5),
+                    0 0 60px rgba(255, 165, 0, 0.5), 
+                    0 0 80px rgba(255, 165, 0, 0.5);
+    }
+    50% {
+        transform: skewX(10deg);
+        box-shadow: 0 0 10px rgba(255, 165, 0, 0.3), 
+                    0 0 20px rgba(255, 165, 0, 0.3),
+                    0 0 60px rgba(255, 165, 0, 0.3), 
+                    0 0 80px rgba(255, 165, 0, 0.3);
+    }
+    75% {
+        transform: skewX(-10deg);
+        box-shadow: 0 0 10px rgba(255, 165, 0, 0.4), 
+                    0 0 20px rgba(255, 165, 0, 0.4),
+                    0 0 60px rgba(255, 165, 0, 0.4), 
+                    0 0 80px rgba(255, 165, 0, 0.4);
+    }
+    100% {
+        transform: skewX(5deg);
+        box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 
+                    0 0 20px rgba(255, 165, 0, 0.5),
+                    0 0 60px rgba(255, 165, 0, 0.5), 
+                    0 0 80px rgba(255, 165, 0, 0.5);
+    }}
+
+   
+    </style>
+
+    <h1>Feliz Cumpleaños Yani!</h1>
+    <p>Numero de velas en la torta: <span id="candle-count">0</span></p>
+    <div class="cake" id="cake">
+        <div class="plate"></div>
+        <div class="layer layer-bottom"></div>
+        <div class="layer layer-middle"></div>
+        <div class="layer layer-top"></div>
+        <div class="icing"></div>
+        <div class="drip drip1"></div>
+        <div class="drip drip2"></div>
+        <div class="drip drip3"></div>
+        
+    </div>
+
+    <section class="audio">
+        <label for="video">
+            <a href="https://www.youtube.com/watch?v=YJ84U_30GRM" class="video"></a>
+        
+        <audio controls>
+
+            <source src="/vi.m4a" type="audio/mpeg">
+        </audio>
+    </label>
+        
+    </section>
+
+    <footer class="footer">
+        <div>
+            <p>@Miguelito</p>
+        </div>
+    </footer>
+    <script>
+        const velaFlame = document.querySelector(".cake");
+const candleCountDisplay = document.getElementById('candle-count');
+let candleCount = 0; // Contador inicial de velas
+
+velaFlame.addEventListener("click", () => {
+    // Incrementar el contador de velas
+    candleCount++;
+
+    // Actualizar el display del número de velas
+    candleCountDisplay.textContent = candleCount;
+
+    // Crear una nueva vela
+    const newCandle = document.createElement("div");
+    newCandle.classList.add("candle");
+
+    const newFlame = document.createElement("div");
+    newFlame.classList.add("flame");
+
+    newCandle.appendChild(newFlame);
+
+    // Obtener las dimensiones de la torta
+    const cakeRect = velaFlame.getBoundingClientRect();
+
+    // Calcular una posición aleatoria dentro de la parte superior de la torta
+    const maxLeft = cakeRect.width - 16; // Ajustar según el ancho de la vela
+    const randomLeft = Math.random() * maxLeft; // Posición horizontal aleatoria
+    const randomVerticalOffset = Math.random() * (30 - 15) + 15; // Posición vertical aleatoria entre -10 y 10px
+
+    // Cambiar la posición de la nueva vela
+    newCandle.style.position = 'absolute';
+    newCandle.style.left = `${randomLeft}px`;
+    newCandle.style.top = `${randomVerticalOffset}px`; // Usar el offset vertical aleatorio
+
+    // Añadir la nueva vela al contenedor de la torta
+    velaFlame.appendChild(newCandle);
+});
+    </script>
+</body>
+</html>
